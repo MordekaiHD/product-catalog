@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import ProductForm from './components/ProductForm';
+import ProductList from './components/ProductList';
+import ProductEdit from './components/ProductEdit';
 
-function App() {
+const App = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleSelectProduct = product => {
+    setSelectedProduct(product);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Product Catalog</h1>
+      <ProductForm />
+      <ProductList onSelectProduct={handleSelectProduct} />
+      {selectedProduct && <ProductEdit product={selectedProduct} />}
     </div>
   );
-}
+};
 
 export default App;
