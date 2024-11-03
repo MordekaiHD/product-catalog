@@ -1,4 +1,3 @@
-// src/components/ProductEdit.js
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateProduct } from '../reduser/productsSlice';

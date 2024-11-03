@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import ProductForm from './components/ProductForm';
 import ProductList from './components/ProductList';

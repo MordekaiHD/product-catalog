@@ -1,4 +1,3 @@
-// src/components/ProductList.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteProduct, toggleAvailability } from '../reduser/productsSlice';
